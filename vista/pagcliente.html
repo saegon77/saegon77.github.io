@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Tienda</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="./paginas/css pags/pagcliente.css">
+    <!-- Icono de la página -->
+    <link rel="icon" href="./img/logo1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        /* Estilos para el círculo del perfil */
+        .profile-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .profile-circle i {
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Asegúrate de que el contenedor de iconos use flexbox */
+        .container-icon {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>Tienda</h1>
+
+        <!-- Contenedor del icono del carrito y botón de perfil -->
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <!-- Icono SVG del carrito -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
+                </svg>
+                <!-- Contador de productos en el carrito -->
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+
+            <!-- Círculo de perfil de usuario -->
+            <a href="../controlador/perfil.php" class="profile-circle">
+                <i class="fas fa-user"></i>
+            </a>
+			<!-- Contenedor de productos en el carrito -->
+			<div class="container-cart-products hidden-cart">
+				<!-- Fila de producto en el carrito (oculta por defecto) -->
+				<div class="row-product hidden">
+					<div class="cart-product">
+						<div class="info-cart-product">
+
+						</div>
+						<!-- Icono SVG para cerrar/eliminar producto -->
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+						</svg>
+					</div>
+				</div>
+
+				<!-- Total del carrito (oculto por defecto) -->
+				<div class="cart-total hidden">
+					<h3>Total:</h3>
+					<span class="total-pagar">$ 0</span>
+				</div>
+				<a href="./paginas/resumen_de_compra.html" class="btn-finalizar-compra">Finalizar Compra</a>
+				<!-- Mensaje de carrito vacío -->
+				<p class="cart-empty"></p>
+			</div>
+		</div>
+	</header>
+	<!-- Contenedor principal de los productos -->
+	<div class="container-items">
+		<!-- Elemento de producto individual (se repite para cada producto) -->
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/APPLE_WATCH_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>APPLE WATCH</h2>
+				<p class="price">$ 2.539.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index2.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/AUDIFONOS_BOSE_35_II_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>AUDIFONOS BOSE 35 II</h2>
+				<p class="price">$ 1.159.990</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index3.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/AUDIFONOS_SONY_WH_1.jpg" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>AUDIFONOS SONY WH</h2>
+				<p class="price">$ 941.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index4.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/BARRA_BEAM_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>BARRA BEAM</h2>
+				<p class="price">$ 1.889.000</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index5.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/CANON_EOS_R5_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>CANON EOS R5</h2>
+				<p class="price">$ 17.999.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index6.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/DELL_15_1.jpg" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>DELL 15</h2>
+				<p class="price">$ 1.542.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index7.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/DRON_MAVIC_AIR_1.webp" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>DRON MAVIC AIR 2</h2>
+				<p class="price">$ 5.999.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index8.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/ECHO_SHOW_10_AMAZON_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>ECHO SHOW 10 AMAZON</h2>
+				<p class="price">$ 1.496.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index9.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/GARMIN_FENIX_6_1.webp" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>GARMIN FENIX 6 </h2>
+				<p class="price">$ 3.285.000</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index10.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/CELULAR_GOOGLE_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>GOOGLE PIXEL 6 PRO</h2>
+				<p class="price">$ 2.999.000</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index11.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/GOPRO_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>GOPRO HERO 9</h2>
+				<p class="price">$ 2.097.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index12.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/HP_SPECTRE_X360-_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>HP SPECTRE X360-</h2>
+				<p class="price">$ 7.800.000</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index13.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/IPHONE_15_1.jpg" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>IPHONE-15 PRO MAX</h2>
+				<p class="price">$ 8.669.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index14.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/LG-OLED_1.avif" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>LG-OLED</h2>
+				<p class="price">$ 2.172.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index15.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/LOGITECH_G_PRO_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>LOGITECH G PRO</h2>
+				<p class="price">$ 430.000</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index16.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/MACBOOK_AIR_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>MACBOOK AIR</h2>
+				<p class="price">$ 6.619.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index17.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/CONSOLA_NINTENDO_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>NINTENDO CONSOLA</h2>
+				<p class="price">$ 1.784.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index18.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/NVIDIA_GEFORCE_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>NVIDIA GEFORCE</h2>
+				<p class="price">$ 6.328.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index19.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/OCULUS_QUEST_2_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>OCULUS QUEST 2</h2>
+				<p class="price">$ 1.172.650</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index20.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/PS5_1.webp" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>PS5</h2>
+				<p class="price">$ 2.889.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index21.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/RAZER_MOUSE_DEATHADDER_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>RAZER MOUSE DEATHADDER</h2>
+				<p class="price">$ 100.209</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index22.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/SAMSUNG_S24_ULTRA_1.webp" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>SAMSUNG S24 ULTRA</h2>
+				<p class="price">$ 6.699.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index23.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/SAMSUNG_TV_49_1.avif" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>SAMSUNG TV 49</h2>
+				<p class="price">$ 2.999.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index24.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/SURFACE_PRO_7_1.png" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>SURFACE PRO 7</h2>
+				<p class="price">$ 9.100.000</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index25.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>    
+		<div class="item">
+			<figure>
+				<img src="./paginas/imgproductos/XBOX_SERIES_1.jpeg" alt="PRODUCTO">
+			</figure>
+			<div class="info-product">
+				<h2>XBOX SERIES</h2>
+				<p class="price">$ 1.919.900</p>
+				<button class="btn-add-cart">Añadir al carrito</button>
+				<a href="./productos/index26.html" class="btn-view-details">Ver más detalles</a>
+			</div>
+		</div>
+	</div>
+
+<!--footer-->
+<footer class="footer">
+	<div class="containerfoot">
+	  <div class="footer-row">
+		<div class="footer-link">
+		  <h4>Síguenos</h4>
+		  <div class="socialmedia">
+			<a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+			<a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+			<a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+			<a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+			<a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+			<a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+		  </div>
+		</div>
+		<div class="footer-link">
+		  <h4>Ayuda</h4>
+		  <div class="ayuda">
+			<ul>
+			  <li> Contactanos <br>
+			  Si tienes dudas escribenos al siguiente correo jyepes75@colegiodulcemaria.edu.co <br>
+			  jgaitan158@colegiodulcemaria.edu.co</li>
+  
+			</ul>
+		  </div>
+		</div>
+		<div class="footer-link">
+  
+		  <div class="footer-logo">
+			<img src="./img/logo.png" alt="Logo de la empresa">
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </footer>
+
+	<!-- Enlace al archivo JavaScript -->
+	<script src="../js/carrito.js"></script>
+</body>
+</html>

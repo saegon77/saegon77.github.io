@@ -1,0 +1,130 @@
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Contenedor de las formas de fondo */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Estilos comunes para todas las formas */
+.shape {
+    position: absolute;
+    opacity: 0.1;
+    transition: all 3s ease;
+}
+
+/* Estilos específicos para cada tipo de forma */
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.square {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 86.6px solid #fff;
+}
+
+/* Contenedor del formulario */
+.box {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    width: 300px;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para el contenedor del formulario */
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para el título del formulario */
+h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estructura del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Efecto focus para los campos de entrada */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #fff;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para el botón de envío */
+button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover para el botón de envío */
+button:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para el texto de placeholder en los campos de entrada */
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}

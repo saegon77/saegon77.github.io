@@ -1,0 +1,256 @@
+:root {
+    --primary-color: #0071e3;
+    --secondary-color: #f5f5f7;
+    --text-color: #1d1d1f;
+    --background-color: #ffffff;
+    --accent-color: #878b86;
+}
+
+body, html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-image-container {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.02);
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.thumbnail {
+    width: calc(33.33% - 10px);
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+    border-radius: 8px;
+}
+
+.thumbnail:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.product-info {
+    flex: 1;
+    padding: 0 40px;
+    max-width: 50%;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.color-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.color-option {
+    display: none;
+}
+
+.color-label {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.color-option:checked + .color-label {
+    border: 2px solid var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.description, .additional-info {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+p {
+    color: var(--accent-color);
+    line-height: 1.6;
+}
+
+.share-icons {
+    margin-top: 40px;
+}
+
+.share-icons h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.share-icons a {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.share-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.share-icons img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .product-images, .product-info {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .main-image-container {
+        max-width: 100%;
+    }
+
+    .thumbnail-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+}
+
+.add-to-cart {
+    display: none;
+}
+
+.back-to-main {
+    margin-top: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.main-button:hover {
+    background-color: #0051a8;
+    transform: scale(1.05);
+}
+
+.main-button {
+    position: relative;
+}
+
+.main-button::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.main-button:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.thumbnail {
+    transition: all 0.3s ease-in-out;
+}

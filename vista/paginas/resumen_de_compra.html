@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen de Compra</title>
+    <link rel="stylesheet" href="./css pags/resumen_de_compra.css">
+    <link rel="icon" href="./img/logo1.png">
+</head>
+<body>
+    <header>
+        <h1>Resumen de tu Compra</h1>
+        <a href="../pagcliente.html" class="volver-catalogo-btn">
+            <img src="../img/logo1.png" alt="Volver al catálogo">
+        </a>
+    </header>
+
+    <main>
+        <div class="products-section">
+            <div class="row-product-list">
+                <!-- Los productos se insertarán aquí dinámicamente con JavaScript -->
+            </div>
+            <div class="cart-total">
+                <h3>Total a pagar: <span class="total-compra"></span></h3>
+            </div>
+            <a href="https://www.youtube.com" class="finalizar_compra_btn">Finalizar compra</a>
+        </div>
+        <div class="payment-section">
+            <div class="payment-methods-container">
+                <h2>Métodos de pago</h2>
+                <div class="payment-options">
+                    <div class="payment-option" data-method="PSE">
+                        <img src="../IMG_PAGO/PSE_logo.jpg" alt="Opción de pago 1">
+                        <span>PSE</span>
+                    </div>
+                    <div class="payment-option" data-method="TARJETAS">
+                        <img src="../IMG_PAGO/Tarjetas_logo.jpg" alt="Opción de pago 2">
+                        <span>TARJETAS</span>
+                    </div>
+                    <div class="payment-option" data-method="EFECTY">
+                        <img src="../IMG_PAGO/Efecty_logo.png" alt="Opción de pago 3">
+                        <span>EFECTY</span>
+                    </div>
+                    <div class="payment-option" data-method="DAVIVIENDA">
+                        <img src="../IMG_PAGO/Davivienda_logo.jpg" alt="Opción de pago 4">
+                        <span>DAVIVIENDA</span>
+                    </div>
+                    <div class="payment-option" data-method="PAYPAL">
+                        <img src="../IMG_PAGO/Paypal_logo.png" alt="Opción de pago 5">
+                        <span>PAYPAL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rating">
+                <span class="star" data-value="1">&#9733;</span>
+                <span class="star" data-value="2">&#9733;</span>
+                <span class="star" data-value="3">&#9733;</span>
+                <span class="star" data-value="4">&#9733;</span>
+                <span class="star" data-value="5">&#9733;</span>
+            </div>
+            <textarea class="review-text" placeholder="Escribe tu reseña aquí..."></textarea>
+            <button class="review-btn">Reseña</button>
+        </div>
+    </main>
+
+    
+
+    <script src="./resumen_de_compra.js"></script>
+</body>
+</html>

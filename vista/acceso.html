@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./paginas/css pags/acceso.css">
+    <title>Acceso Tecnológico</title>
+</head>
+<body>
+    <!-- Contenedor de las formas de fondo -->
+    <div class="background">
+        <!-- Formas geométricas con posiciones iniciales -->
+        <div class="shape circle" style="top: 20%; left: 10%;"></div>
+        <div class="shape square" style="top: 60%; left: 80%;"></div>
+        <div class="shape triangle" style="top: 80%; left: 40%;"></div>
+        <div class="shape circle" style="top: 10%; left: 70%;"></div>
+        <div class="shape square" style="top: 30%; left: 30%;"></div>
+    </div>
+
+    <!-- Contenedor del formulario -->
+    <div class="box">
+        <form action="../modelo/dbconfig.php" method="post">
+            <h1>Acceso</h1>
+            
+            <!-- Campo de entrada para el nombre de usuario -->
+            <label for="usua_nombre">Nombre:</label>
+            <input type="text" name="usua_nombre" id="usua_nombre" placeholder="Nombre..." required>
+            
+            <!-- Campo de entrada para la contraseña -->
+            <label for="usua_clave">Clave</label>
+            <input type="password" name="usua_clave" id="usua_clave" placeholder="Ingrese su clave..." required>
+            
+            <!-- Botón de envío del formulario -->
+            <button type="submit">Acceder</button> 
+        </form>
+    </div>
+
+    <!-- Script para mover las formas de fondo -->
+    <script>
+        // Selecciona todas las formas y les aplica un movimiento aleatorio cada 3 segundos
+        document.querySelectorAll('.shape').forEach(shape => {
+            setInterval(() => {
+                shape.style.top = Math.random() * 100 + '%';
+                shape.style.left = Math.random() * 100 + '%';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

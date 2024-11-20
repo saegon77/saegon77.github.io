@@ -1,0 +1,220 @@
+/* Reseteo general de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none; 
+}
+
+/* Estilos del encabezado */
+header {
+  background-color: black;
+  padding: 10px 0;
+}
+
+/* Contenedor del encabezado */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos del logo */
+.logo {
+  flex: auto;
+}
+
+.logo img {
+  width: 300px; /* Ancho del logo */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  margin-bottom: -23px; /* Ajuste vertical */
+  margin-right: 635px; /* Ajuste horizontal */
+}
+
+.search-bar input {
+  padding: 10px;
+  padding-right: 100px;
+  border-radius: 5px 0 0 5px;
+  border: 0;
+  outline: none;
+}
+
+.search-bar button {
+  background-color: white;
+  padding: 10px;
+  border-color: black;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  color: black;
+  cursor: pointer;
+} 
+
+/* Menú de navegación */
+.menu {
+  flex: 1;
+  text-align: right;
+  position: relative;
+  top: -30px; /* Ajuste vertical */
+}
+
+.menu ul {
+  margin: -10px;
+  padding: 0;
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.menu ul li a:hover {
+  color: gray;
+}
+
+/* Estilos del carrusel */
+button .carousel-control-prev, .carousel-control-next:hover {
+  background-color: transparent;
+}
+
+.carousel-control-prev {
+  color: transparent;
+}
+
+/* Estilos del pie de página */
+.containerfoot {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: black;
+  padding: 80px 0;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  width: 33.33%;
+  padding: 0 15px;
+}
+
+.footer-link h4 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-link .ayuda ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-link .ayuda ul li {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.footer-link .ayuda ul li a {
+  color: white;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.footer-link .ayuda ul li a:hover {
+  color: #ccc;
+  padding-left: 7px;
+}
+
+.footer-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-logo img {
+  max-width: 350px;
+  height: auto;
+}
+
+/* Iconos de redes sociales */
+.socialmedia a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all .5s ease;
+}
+
+.socialmedia a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Estilos de la sección "Sobre nosotros" */
+.sobre_nosotros {
+  display: flex;
+  max-width: 1800px;
+  height: 800px;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text-section {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.image-section {
+  flex: 1;
+  padding: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que exceda los límites de la sección */
+}
+
+.image-section img {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de la sección */
+  height: 100%; /* Hace que la imagen ocupe todo el alto de la sección */
+  object-fit: cover; /* Ajusta la imagen para que se ajuste a la sección manteniendo la relación de aspecto */
+}
+
+h2 {
+  color: black;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+p {
+  line-height: 1.6;
+  color: #333;
+font-size: 20px;
+}
